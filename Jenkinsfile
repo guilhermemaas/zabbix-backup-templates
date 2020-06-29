@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        bat(script: 'python\\scripts\\exportar_templates.py', label: 'python')
+      }
+    }
+
   }
 }
