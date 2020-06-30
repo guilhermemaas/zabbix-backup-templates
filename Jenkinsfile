@@ -5,7 +5,7 @@ pipeline {
       steps {
         bat 'cd scripts'
         bat 'dir'
-        bat '.\\exec_script_local.bat'
+        bat 'scripts\\exec_script_local.bat'
       }
     }
 
