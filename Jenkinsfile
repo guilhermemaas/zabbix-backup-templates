@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('run python script') {
       steps {
-        bat 'script\\exec_script_local.bat'
+        bat 'cd script'
+        bat '.\\exec_script_local.bat'
       }
     }
 
