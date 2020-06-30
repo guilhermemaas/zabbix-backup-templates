@@ -10,6 +10,7 @@ pipeline {
     stage('GitHub push') {
       steps {
         bat 'git add .'
+        bat 'git commit -m "update files"'
         bat 'git push origin master'
       }
     }
