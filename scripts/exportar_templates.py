@@ -12,6 +12,6 @@ for h in zapi.template.get(output="extend", query='selectGroups'):
     file_name = h['host']
     print(h['host'])
     xml = dicttoxml(h, custom_root='teste', attr_type=False)
-    with open(f'C:\\Users\\guilherme.maas\\Documents\\dev\\zabbix\\api\\exportar_templates\\templates\\{file_name}.xml', 'ab') as out:
+    with open(f'..\\templates\\{file_name}.xml', 'ab') as out:
         out.write(xml)
 
