@@ -1,2 +1,2 @@
-mkdir ..\templates
-python teste_local.py
+mkdir templates
+python scripts\teste_local.py
