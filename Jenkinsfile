@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('GitHub push') {
+      steps {
+        bat 'git add .'
+        bat 'git push origin master'
+      }
+    }
+
   }
 }
