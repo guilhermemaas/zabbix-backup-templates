@@ -1,6 +1,7 @@
 from pyzabbix import ZabbixAPI
 from dicttoxml import dicttoxml
 import sys
+import json
 
 zapi = ZabbixAPI("http://localhost/api_jsonrpc.php")
 #http://localhost/zabbix.php?
@@ -23,6 +24,11 @@ export_options = {
 
 template_10265 = zapi.configuration.export(format="json", options=export_options)
 print(template_10265)
+
+
+with open('template10265.json', 'w') as json_file:
+    json.dump(template_10265, json_file)
+
 
 """
 for t in zapi.configuration.export(format="xml", options=export_options):
